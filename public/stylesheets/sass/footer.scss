@@ -46,19 +46,24 @@ footer {
           background: url(images/flags/fr@2x.png);
           background-size: 23px;
         }
-
       }
 
       div.dropdown_list {
         position: absolute;
         top: -90px;
         left: 50%;
-        margin-left: -60px;
+        margin: 0 0 0 -60px;
         width: 100px;
         background: white;
         padding: 15px;
         border-radius: 4px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+
+        @media (max-width: 1080px) {
+          left: auto;
+          right: 0;
+          margin: 0;
+        }
 
         ul {
           padding: 0;
@@ -122,9 +127,15 @@ footer {
           border-width: 11px;
           left: 50%;
           bottom: -11px;
-          margin-left: -11px;
+          margin: 0 0 0 -11px;
           border-top-color: white;
           border-bottom-width: 0;
+
+          @media (max-width: 1080px) {
+            left: auto;
+            right: 20px;
+            margin: 0;
+          }
 
           &:after {
             position: absolute;
