@@ -95,10 +95,12 @@
         var svg = d3.select(element[0])
                     .append("svg:svg")
                     .attr("width", "100%")
-                    .attr("height", "auto")
+                    .attr("height", "440")
                     .attr("viewBox", "0 0 " + config.width * 2 + " " + config.height * 2 )
                     .attr("preserveAspectRatio", "xMidYMin meet")
                     .append("svg:g")
+                    .attr("width", "100%")
+                    .attr("height", "100%")
                     .attr("transform", "translate(" + config.width / 2 + "," + config.height / 2 + ")");
 
         var circleContainer = svg.append("svg:g");
