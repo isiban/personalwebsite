@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "name": "HTML5",
+      "percentage": "90",
+      "color": "#bedbe9"
+    },
+    {
+      "name": "CSS3",
+      "percentage": "90",
+      "color": "#97be0d"
+    },
+    {
+      "name": "JavaScript",
+      "percentage": "85",
+      "color": "#666666"
+    },
+    {
+      "name": "JQuery",
+      "percentage": "80",
+      "color": "#cc4324"
+    },
+    {
+      "name": "AngularJS",
+      "percentage": "70",
+      "color": "#d84f5f"
+    },
+    {
+      "name": "NodeJS",
+      "percentage": "40",
+      "color": "#1c7ae5"
+    },
+    {
+      "name": "D3",
+      "percentage": "70",
+      "color": "#cc4324"
+    }
+  ]
+}

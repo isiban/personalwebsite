@@ -1,0 +1,42 @@
+<section class="about">
+  <article class="content_slide">
+    <div class="ch-item">
+      <div class="ch-info">
+        <h3>
+          <span class="char1">H</span>
+          <span class="char2">i</span>
+          <span class="char3">r</span>
+          <span class="char4">e</span>
+          <span class="char5"></span>
+          <span class="char6">m</span>
+          <span class="char7">e</span>
+          <span class="char8">!</span>
+        </h3>
+      </div>
+      <a class="download_link"
+         ng-if="aboutCtrl.isCurrentLanguage('fr')"
+         href="/pdf/Curriculum_Vitae_ILYA_SIBAN.pdf" target="_blank"></a>
+      <a class="download_link"
+         ng-if="aboutCtrl.isCurrentLanguage('en')"
+         href="/pdf/ilya_siban_resume.pdf" target="_blank"></a>
+      <div class="ch-thumb ch-img-1"></div>
+    </div>
+
+    <h1>Ilya Siban</h1>
+    <h2>{{ "translation.home.title" | translate }}</h2>
+
+    <ul class="technos">
+      <li class="angular"></li>
+      <li class="nodejs"></li>
+      <li class="html5"></li>
+      <li class="css3"></li>
+      <li class="d3js"></li>
+      <li class="sass"></li>
+    </ul>
+
+    <a class="portfolio_link" ui-sref="portfolio">
+      {{ "translation.home.discover" | translate }}
+    </a>
+
+  </article>
+</section>

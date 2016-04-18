@@ -1,0 +1,214 @@
+{
+  "data": [
+    {
+      "title": "Talentoday",
+      "website": "https://www.talentoday.com/",
+      "class": "talentoday",
+      "logo": "images/portfolios/talentoday.jpg",
+      "client": {
+        "description": "A global leader in modern-day career guidance, Talentoday is improving the effectiveness and outcomes for individuals seeking to know themselves better to help find their dream job. The online community based career guidance platform automates and simplifies the guidance process by providing a free assessment for individuals and a comprehensive guidance platform for career counselors that accelerates and scales effective job placement as well as identifies career path opportunities.",
+        "job": "Front End Developer",
+        "technologies": ["html5", "css3", "sass", "angular", "jquery", "d3", "ror"]
+      },
+      "images": [
+        {
+          "name": "Home Page",
+          "ref": "/images/portfolios/talentoday/screen_1.png"
+        },
+        {
+          "name": "Home Page Business",
+          "ref": "/images/portfolios/talentoday/screen_2.png"
+        },
+        {
+          "name": "Business Talentoday Manager",
+          "ref": "/images/portfolios/talentoday/screen_7.png"
+        },
+        {
+          "name": "Business Certification",
+          "ref": "/images/portfolios/talentoday/screen_4.png"
+        },
+        {
+          "name": "Business Request a Demo",
+          "ref": "/images/portfolios/talentoday/screen_5.png"
+        },
+        {
+          "name": "Business Pricing",
+          "ref": "/images/portfolios/talentoday/screen_6.png"
+        },
+        {
+          "name": "Business Careers",
+          "ref": "/images/portfolios/talentoday/screen_7.png"
+        },
+        {
+          "name": "Sessions Login",
+          "ref": "/images/portfolios/talentoday/screen_8.png"
+        },
+        {
+          "name": "Dashboard Personality",
+          "ref": "/images/portfolios/talentoday/screen_9.png"
+        }
+      ]
+    },
+    {
+      "title": "L'Alliance7",
+      "website": "http://www.alliance7.com/",
+      "class": "alliance7",
+      "logo": "images/portfolios/alliance7.jpg",
+      "client": {
+        "description": "L’Alliance 7 est une fédération de syndicats professionnels rassemblant 9 Professions de l'alimentaire qui ont toutes leurs spécificités sur le plan de leur organisation, de leur structure, de leur fonctionnement, et de leurs produits et qui ont su mettre leurs ressources en commun pour s’entourer de professionnels, disposer de services efficaces et devenir un véritable interlocuteur pour les pouvoirs publics, avec un taux de plus de 90 % de représentativité.",
+        "job": "Stage Agence conseil en stratégie web Gris-Metal",
+        "technologies": ["wordpress", "php", "html5", "css3"]
+      },
+      "images": [
+        {
+          "name": "Home Page",
+          "ref": "/images/portfolios/alliance7/screen_1.png"
+        },
+        {
+          "name": "Actualité - Présidente",
+          "ref": "/images/portfolios/alliance7/screen_2.png"
+        },
+        {
+          "name": "Actualité - Agenda",
+          "ref": "/images/portfolios/alliance7/screen_3.png"
+        },
+        {
+          "name": "L'alliance7 - Présentation",
+          "ref": "/images/portfolios/alliance7/screen_4.png"
+        },
+        {
+          "name": "L'alliance7 - Partenaires",
+          "ref": "/images/portfolios/alliance7/screen_5.png"
+        },
+        {
+          "name": "L'alliance7 - Syndicat Confiserie",
+          "ref": "/images/portfolios/alliance7/screen_6.png"
+        },
+        {
+          "name": "L'alliance7 - Syndicat Chocolat",
+          "ref": "/images/portfolios/alliance7/screen_7.png"
+        },
+        {
+          "name": "L'alliance7 - Adhérents Annuaire",
+          "ref": "/images/portfolios/alliance7/screen_8.png"
+        },
+        {
+          "name": "L'alliance7 - Adhérents Carte",
+          "ref": "/images/portfolios/alliance7/screen_9.png"
+        },
+        {
+          "name": "L'alliance7 - Horizon 2020",
+          "ref": "/images/portfolios/alliance7/screen_10.png"
+        },
+        {
+          "name": "L'alliance7 - Publications",
+          "ref": "/images/portfolios/alliance7/screen_11.png"
+        },
+        {
+          "name": "L'alliance7 - Publications Chiffres Clés",
+          "ref": "/images/portfolios/alliance7/screen_12.png"
+        }
+      ]
+    },
+    {
+      "title": "Annina ROESCHEISEN",
+      "website": "http://www.anninaroescheisen.com/",
+      "class": "annina",
+      "logo": "images/portfolios/annina.jpg",
+      "client": {
+        "description": "Annina Roescheisen est une mannequin métisse allemande/slovaine qui est née et à grandit à Munich. Dotées de compétences multiples, elle évolue en tant qu'égérie de mode pour des marques telles que Diesel ou encore Le Temps des Cerises. Diplomée d'un Master en 'Histoire de l'Art, Philosophie et Folklore' elle travaille depuis 2010 à Paris comme agent d'artiste d'art contemporain et a réalisé plusieurs expositions à Paris et à Munich.",
+        "job": "Stage Agence conseil en stratégie web Gris-Métal",
+        "technologies": ["wordpress", "css3", "jquery"]
+      },
+      "images": [
+        {
+          "name": "Home Page",
+          "ref": "/images/portfolios/annina/screen_1.png"
+        },
+        {
+          "name": "Art",
+          "ref": "/images/portfolios/annina/screen_2.png"
+        },
+        {
+          "name": "Humanity",
+          "ref": "/images/portfolios/annina/screen_3.png"
+        },
+        {
+          "name": "Contact",
+          "ref": "/images/portfolios/annina/screen_4.png"
+        }
+      ]
+    },
+    {
+      "title": "France Originelle",
+      "website": "http://www.franceoriginelle.com/",
+      "class": "madeinfrance",
+      "logo": "images/portfolios/madeinfrance.jpg",
+      "client": {
+        "description": "France Originelle est une entreprise qui a pour ambition de valoriser à l’international des produits d’origine française. France Originelle souhaite clairement se démarquer du système 'low cost' et met à disposition de ses clients étrangers son expertise en proposant une gamme de produits français sélectionnée sur  mesure tout en assurant un accompagnement de terrain.",
+        "job": "Stage Agence conseil en stratégie web Gris-Métal",
+        "technologies": ["html5", "css3"]
+      },
+      "images": [
+        {
+          "name": "Home Page",
+          "ref": "/images/portfolios/franceoriginelle/screen_1.png"
+        },
+        {
+          "name": "About",
+          "ref": "/images/portfolios/franceoriginelle/screen_2.png"
+        },
+        {
+          "name": "Offer",
+          "ref": "/images/portfolios/franceoriginelle/screen_3.png"
+        },
+        {
+          "name": "Team",
+          "ref": "/images/portfolios/franceoriginelle/screen_4.png"
+        }
+      ]
+    },
+    {
+      "title": "Dominique CLERC",
+      "website": "http://dominiqueclerc.com",
+      "class": "dominiqueclerc",
+      "logo": "images/portfolios/dominiqueclerc.jpg",
+      "client": {
+        "description": "Dominique Clerc est un artiste photographe qui vit et travaille à Paris.Il apprend très tôt son métier en tant qu’assistant dans la mode et la publicité. Parallèlement à une carrière publicitaire, son travail personnel le conduit à une première série d’expositions en France et aux Etats Unis dans les années 1990.",
+        "job": "Stage Agence conseil en stratégie web Gris-Metal",
+        "technologies": ["php", "html5", "css3", "jquery"]
+      },
+      "images": [
+        {
+          "name": "Home Page",
+          "ref": "/images/portfolios/dominiqueclerc/screen_1.png"
+        },
+        {
+          "name": "Bio",
+          "ref": "/images/portfolios/dominiqueclerc/screen_2.png"
+        },
+        {
+          "name": "Contact",
+          "ref": "/images/portfolios/dominiqueclerc/screen_3.png"
+        }
+      ]
+    },
+    {
+      "title": "Pro Aid Autisme",
+      "website": "http://proaidautisme.org/",
+      "class": "proaidautisme",
+      "logo": "images/portfolios/proaidautisme.jpg",
+      "client": {
+        "description": "Pro Aid Autisme est une association de parents de personnes atteintes d'autisme créée en 1985 qui a pour vocation d'organiser des formations sur les programmes d'éducation structuré, d'assurer l'information des familles, et de participer au débat scientifique et au débat règlementaire français sur la pris en charge des personnes avec autisme.",
+        "job": "Stage Agence conseil en stratégie web Gris-Métal",
+        "technologies": ["html5", "css3", "wordpress"]
+      },
+      "images": [
+        {
+          "name": "Home Page",
+          "ref": "/images/portfolios/proaidautisme/screen_1.png"
+        }
+      ]
+    }
+  ]
+}

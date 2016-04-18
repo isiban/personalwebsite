@@ -1,0 +1,18 @@
+<div class="select_languages">
+  <p class="selected_language"
+     ng-class="selectLanguagesCtrl.getSelectedCountryCssClass()"
+     ng-click="selectLanguagesCtrl.switchDropdownVisibility()">
+    {{ selectLanguagesCtrl.getSelectedItem().name }}
+  </p>
+  <div ng-if="selectLanguagesCtrl.getDropdownVisibility()"
+       class="dropdown_list">
+    <ul>
+      <li ng-repeat="item in selectLanguagesCtrl.getItems()"
+          ng-click="selectLanguagesCtrl.changeLanguage($index)"
+          ng-class="selectLanguagesCtrl.getSelectItemCssClass($index)">
+        <p ng-class="selectLanguagesCtrl.getCountryCssClass($index)">{{ item.name }}</p>
+      </li>
+    </ul>
+    <div class="arrow"></div>
+  </div>
+</div>

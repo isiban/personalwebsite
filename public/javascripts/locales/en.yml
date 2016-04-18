@@ -1,0 +1,90 @@
+translation:
+  menu:
+    about: "About"
+    portfolio: "Portfolio"
+    curriculum: "Curriculum"
+    contact: "Contact"
+
+  home:
+    title: "Front End Web Developer"
+    discover: "Discover My Work"
+
+  footer:
+    made: "Made with"
+    country: "in Paris"
+
+  portfolio:
+    nav:
+      professional: "Professional"
+      personal: "Personal"
+    main_intro:
+      title: "With simple things..."
+      subtitle: "I make beautiful websites...!"
+    intro:
+      see_more: "See more"
+      visit: "Visit the website"
+
+  curriculum:
+    nav:
+      skills: "Skills"
+      experiences: "Experiences"
+      education: "Education"
+
+    experiences:
+      talentoday:
+        job: "Lead Front End Web Developer"
+        company: "Talentoday Inc, 75008 Paris"
+        dates: "oct 2013 - present"
+        description:
+          "Talentoday, my first startup experience, is an international company with offices in Paris
+          and San Francisco, built as a personality assessment for consumers and a SaaS software for
+          professional HR firms and staffing agencies.
+          Hired as the first member of the engineering team and the only Front End developer, I was
+          involved in the UX/UI conception process and the web development of a multi-million user web
+          platform with extremely high daily traffic. Starting from scratch, I developed and integrated
+          every piece linked to the front side of the platform such as an editable user dashboard, a
+          back-office for the website, a Business website to present the products, company information,
+          technology, and the team, and finally the SaaS software Talentoday Manager."
+        achievments:
+          nb1: "Developed unique data visualization charts using Chart.js and D3.js libraries."
+          nb2: "Developed an editable user profile."
+          nb3: "Developed a PDF report dedicated for the consumer and the HR manager. "
+          nb4: "Developed a back-office to administer the website."
+          nb5: "Developed an analytics back-office with multiples charts."
+          nb6: "Developed a SaaS software dedicated for HR Manager."
+          nb7: "Developed a Business Website to showcase the company, the products and team."
+          nb8: "Developed a blog dedicated to the company using the Wordpress CMS."
+          nb9: "Participated in the migration of the whole website into AngularJS."
+          nb10: "Managed an international team of translators in order to manage four languages present on the website."
+
+      grismetal:
+        job: "Junior Web Developer"
+        company: "Gris-Metal SAS, 75020 Paris"
+        dates: "jan 2013 - aug 2013"
+        description:
+          As a six-month position carried out at the end of my Degree at the University of Limoges,
+          I worked in Gris-Metal web agency based in the Paris area and composed of a small team with
+          a director, developer and two graphic designers.
+          Self-motivated, I learned how to work alone and build beautiful and responsive websites based
+          on a sketch from graphic designers. I also had to take feedback directly from the clients and
+          to organize and lead training seminars to help the clients with their back-offices.
+        achievments:
+          nb1: "Developed multiple websites using technologies such as PHP, HTML5, CSS3, JQuery and Wordpress CMS :
+            - http://www.alliance7.com
+            - http://dominiqueclerc.com
+            - http://www.franceoriginelle.com
+            - http://www.anninaroescheisen.com
+            - http://proaidautisme.org"
+          nb2: "Organized and lead training seminars for agency clients."
+
+  contact:
+    form:
+      last_name: "Last name"
+      first_name: "First name"
+      phone: "Phone number"
+      email: "Email"
+      object: "Object"
+      message: "Message"
+      submit: "Send"
+
+

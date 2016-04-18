@@ -1,0 +1,87 @@
+.ch-item {
+  width: 150px;
+  height: 150px;
+  margin: 30px auto 0 auto;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  cursor: pointer;
+  box-shadow: 0px 0.5px 0.5px 0.5px rgba(0,0,0,0.25);
+}
+
+.ch-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255, 0.5);
+  transform-origin: 95% 40%;
+  transition: all 0.3s ease-in-out;
+}
+
+a.download_link {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: white;
+  width: 80px;
+  height: 80px;
+  margin: -40px 0 0 -40px;
+  background: #2e8eac url(images/pdf.png) no-repeat center center/ 100% auto;
+}
+
+.ch-img-1 { background: #2e8eac url(images/ilya_siban.jpg) no-repeat -12px 5px / 100% auto; }
+
+.ch-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  box-shadow: inset 0 0 0 5px rgba(46, 142, 172, 1);
+}
+
+.ch-info h3 {
+  color: #2e8eac;
+  position: relative;
+  font-weight: 400;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: translate(11%, -10px) rotate(-97deg);
+
+  span {
+    height: 60px;
+    position: absolute;
+    width: 150px;
+    left: 0;
+    top: 0px;
+    transform-origin: bottom center;
+  }
+}
+
+  @for $i from 1 through 16 {
+    $num-letters: 8;
+    $angle-span: 180deg;
+    $angle-offset: 0deg;
+    $angle-per-char: $angle-span / $num-letters;
+
+    @function lettering( $i ) {
+      @return rotate( $angle-offset + $angle-per-char * $i );
+    }
+
+    .char#{ $i } {
+      transform: lettering( $i );
+    }
+  }
+
+.ch-item:hover .ch-thumb {
+  box-shadow: inset 0 0 0 5px rgba(255,255,255, 0.5), 0 1px 3px rgba(0,0,0,0.2);
+  transform: rotate(-110deg);
+}
+

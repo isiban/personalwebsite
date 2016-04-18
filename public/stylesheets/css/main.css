@@ -1,0 +1,62 @@
+html,
+body {
+  background: linear-gradient(163deg, #1a2565 10%, #196d82 36%, #9182be 85%);
+  font-family: "Roboto condensed";
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html.portfolio,
+body.portfolio {
+  background: #008060;
+}
+
+html.curriculum,
+body.curriculum {
+  background: #24a79e;
+}
+
+html.contact,
+body.contact {
+  background: #196d82;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+input,
+textarea {
+  font-family: "Roboto condensed";
+}
+
+div.main_container {
+  min-height: 100%;
+  margin: 0 0 -60px 0;
+}
+
+div.main_container:after {
+  content: "";
+  display: block;
+  height: 60px;
+}
+
+section {
+  width: 100%;
+}
+
+article.content_slide {
+  display: block;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  article.content_slide {
+    padding: 0 20px;
+  }
+}

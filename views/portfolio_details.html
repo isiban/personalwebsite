@@ -1,0 +1,87 @@
+<div class="browser">
+  <div class="top">
+    <div class="actions">
+      <a class="close"
+         ng-click="portfolioDetailsCtrl.closeActivePortfolio()"></a><!--
+   --><a class="minus"></a><!--
+   --><a class="plus"
+         ng-click="portfolioDetailsCtrl.switchFullMode()"></a><!--
+   --><button class="prev"
+              ng-click="portfolioDetailsCtrl.swipePrevScreen()"
+              ng-disabled="!portfolioDetailsCtrl.isPhotoSwipeActive()"></button><!--
+   --><button class="next"
+              ng-disabled="!portfolioDetailsCtrl.getNextButtonStatus()"
+              ng-click="portfolioDetailsCtrl.swipeNextScreen()"></button>
+    </div><!--
+ --><span class="url">
+      <span ng-if="!portfolioDetailsCtrl.isPortfolioActive()">
+        http://www.ilyasiban.io/portfolio
+      </span>
+      <span>
+        {{ portfolioDetailsCtrl.getPortfolio().website }}
+      </span>
+    </span>
+  </div>
+  <div class="browser_content">
+    <!-- Portoflio Index ########################################################################-->
+    <div ng-if="!portfolioDetailsCtrl.isPhotoSwipeActive() && !portfolioDetailsCtrl.isPortfolioActive()"
+         class="main_intro">
+      <h1>{{ "translation.portfolio.main_intro.title" | translate }}</h1>
+      <ul>
+        <li class="cofee"></li>
+      </ul>
+      <ul>
+        <li class="headphone"></li>
+        <li class="spotify"></li>
+      </ul>
+      <ul>
+        <li class="macbook"></li>
+        <li class="sublimeText"></li>
+        <li class="terminal"></li>
+      </ul>
+      <h1>{{ "translation.portfolio.main_intro.subtitle" | translate }}</h1>
+    </div>
+
+    <!-- Portoflio Summary ######################################################################-->
+    <div ng-if="!portfolioDetailsCtrl.isPhotoSwipeActive() && portfolioDetailsCtrl.isPortfolioActive()"
+         class="intro" >
+      <div class="picture_details">
+        <img ng-src="{{ portfolioDetailsCtrl.getPortfolio().logo }}">
+        <h2>Position</h2>
+        <p>{{ portfolioDetailsCtrl.getPortfolio().client.job }}</p>
+        <h2>Dates</h2>
+        <p></p>
+      </div><!--
+   --><div class="intro_description">
+        <h1>{{ portfolioDetailsCtrl.getPortfolio().title }} Project</h1>
+        <p class="description">
+          {{ portfolioDetailsCtrl.getPortfolio().client.description }}
+        </p>
+
+        <ul class="technos">
+          <li ng-repeat="techno in portfolioDetailsCtrl.getPortfolio().client.technologies"
+              ng-class="portfolioDetailsCtrl.getTechnosCssClass($index)">
+          </li>
+        </ul>
+
+        <div class="links">
+          <a ng-click="portfolioDetailsCtrl.swipeNextScreen()">See more</a>
+          <a class="website_link"
+             ng-href="{{ portfolioDetailsCtrl.getPortfolio().website }}" target="_blank">
+            Visit the website
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pictures slide #########################################################################-->
+    <div class="picture"
+         ng-swipe-left="portfolioDetailsCtrl.swipeNextScreen()"
+         ng-swipe-right="portfolioDetailsCtrl.swipePrevScreen()"
+         ng-if="portfolioDetailsCtrl.isPhotoSwipeActive() && portfolioDetailsCtrl.isActiveSlide($index)"
+         ng-repeat="picture in portfolioDetailsCtrl.getPortfolio().images">
+      <img title="{{ picture.title }}" ng-src="{{ picture.ref }}"/>
+    </div>
+  </div>
+</div>
+

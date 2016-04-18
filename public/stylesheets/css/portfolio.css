@@ -1,0 +1,558 @@
+section.portfolio {
+  padding: 60px 0 0 0;
+}
+
+section.portfolio nav {
+  max-width: 300px;
+  margin: 30px auto;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: none;
+}
+
+section.portfolio nav ul {
+  margin: 0;
+  padding: 0 0 15px 0;
+  list-style-type: none;
+}
+
+section.portfolio nav ul > li {
+  display: inline-block;
+  margin-right: 30px;
+  color: black;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+section.portfolio nav ul > li.active {
+  color: white;
+}
+
+section.portfolio nav ul > li:last-of-type {
+  margin: 0;
+}
+
+section.portfolio div.content {
+  padding: 60px 0 0 0;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  section.portfolio div.content {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  section.portfolio div.left,
+  section.portfolio div.right {
+    display: block;
+  }
+}
+
+section.portfolio div.left {
+  width: 100px;
+}
+
+@media (max-width: 767px) {
+  section.portfolio div.left {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+section.portfolio div.right {
+  width: calc(100% - 100px);
+  width: -webkit-calc(100% - 100px);
+  overflow-y: scroll;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0 0 0 50px;
+}
+
+@media (max-width: 767px) {
+  section.portfolio div.right {
+    width: 100%;
+  }
+}
+
+section.portfolio div.left > ul.portfolios {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  section.portfolio div.left > ul.portfolios {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: visible;
+  }
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #e5e5e5;
+  outline: none;
+  border-radius: 50%;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  section.portfolio div.left > ul.portfolios li.portfolio {
+    flex-shrink: 0;
+    flex-basis: 70px;
+  }
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: black;
+  opacity: 0.2;
+  left: 0;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio:hover:before, section.portfolio div.left > ul.portfolios li.portfolio.selected:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: black;
+  left: 0;
+  border-radius: 50%;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio.talentoday {
+  background: url(images/portfolios/talentoday.jpg);
+  background-size: 100%;
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio.alliance7 {
+  background: url(images/portfolios/alliance7.jpg);
+  background-size: 100%;
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio.annina {
+  background: url(images/portfolios/annina.jpg);
+  background-size: 100%;
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio.madeinfrance {
+  background: url(images/portfolios/madeinfrance.jpg);
+  background-size: 100%;
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio.dominiqueclerc {
+  background: url(images/portfolios/dominiqueclerc.jpg);
+  background-size: 100%;
+}
+
+section.portfolio div.left > ul.portfolios li.portfolio.proaidautisme {
+  background: url(images/portfolios/proaidautisme.jpg);
+  background-size: 100%;
+}
+
+section.portfolio div.top {
+  background: #d7d7d7;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 -1px #999 inset;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+
+section.portfolio div.top div.actions {
+  margin: 0 15px 0 0;
+  padding: 0;
+  display: inline-block;
+}
+
+section.portfolio div.top div.actions a {
+  background: #ffbf2f;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: default;
+}
+
+section.portfolio div.top div.actions a.close {
+  background: #ff6259;
+  position: relative;
+}
+
+section.portfolio div.top div.actions a.close:hover:before {
+  content: "\f00d";
+  position: absolute;
+  font-family: "FontAwesome";
+  left: 3px;
+  top: 3px;
+  color: black;
+  font-size: 7px;
+}
+
+section.portfolio div.top div.actions a.plus {
+  margin: 0 15px 0 0;
+  background: #28ca41;
+  position: relative;
+}
+
+section.portfolio div.top div.actions a.plus:hover:before {
+  content: "\f065";
+  position: absolute;
+  font-family: "FontAwesome";
+  left: 3px;
+  top: 2px;
+  color: black;
+  font-size: 7px;
+}
+
+section.portfolio div.top div.actions button.prev,
+section.portfolio div.top div.actions button.next {
+  background: #f8f8f8;
+  position: relative;
+  border: 1px solid #999;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #808080;
+}
+
+section.portfolio div.top div.actions button.prev:disabled,
+section.portfolio div.top div.actions button.next:disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #c6c6c6;
+}
+
+section.portfolio div.top div.actions button.prev:active,
+section.portfolio div.top div.actions button.next:active {
+  background: #e1e1e1;
+}
+
+section.portfolio div.top div.actions button.next {
+  margin: 0 0 0 -1px;
+}
+
+section.portfolio div.top div.actions button.prev:before {
+  content: "\f053";
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 6px;
+  top: 7px;
+}
+
+section.portfolio div.top div.actions button.next:before {
+  content: "\f054";
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 8px;
+  top: 7px;
+}
+
+section.portfolio div.top span.url {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 135px);
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #999;
+  padding: 0 0 0 8px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+}
+
+section.portfolio div.browser {
+  border-radius: 4px;
+}
+
+section.portfolio div.browser_content {
+  background: none;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+}
+
+section.portfolio div.browser_content div.main_intro {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+section.portfolio div.browser_content div.main_intro h1 {
+  font-weight: 300;
+  font-size: 32px;
+  margin: 0;
+  color: white;
+}
+
+section.portfolio div.browser_content div.main_intro ul {
+  margin: 10px 0;
+  padding: 0;
+}
+
+section.portfolio div.browser_content div.main_intro ul:first-of-type {
+  margin: 10px 0 0 0;
+}
+
+section.portfolio div.browser_content div.main_intro ul:last-of-type {
+  margin: 0 0 10px 0;
+}
+
+section.portfolio div.browser_content div.main_intro ul li {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(20% - 15px);
+  height: 100px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  position: relative;
+}
+
+section.portfolio div.browser_content div.main_intro ul li:after {
+  content: "+";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  margin: -30px 0 0 0;
+  font-size: 50px;
+}
+
+section.portfolio div.browser_content div.main_intro ul li.spotify {
+  background: url(images/portfolios/intro/spotify.png) no-repeat center center/50% auto;
+}
+
+section.portfolio div.browser_content div.main_intro ul li.headphone {
+  background: url(images/portfolios/intro/headphone.png) no-repeat center center/80% auto;
+}
+
+section.portfolio div.browser_content div.main_intro ul li.cofee {
+  background: url(images/portfolios/intro/cofee.png) no-repeat center center/50% auto;
+}
+
+section.portfolio div.browser_content div.main_intro ul li.macbook {
+  background: url(images/portfolios/intro/macbook.png) no-repeat center center/75% auto;
+}
+
+section.portfolio div.browser_content div.main_intro ul li.terminal {
+  background: url(images/portfolios/intro/terminal.png) no-repeat center center/50% auto;
+}
+
+section.portfolio div.browser_content div.main_intro ul li.sublimeText {
+  background: url(images/portfolios/intro/sublimeText.png) no-repeat center center/95% auto;
+}
+
+section.portfolio div.browser_content div.main_intro ul li:last-of-type {
+  margin: 0;
+}
+
+section.portfolio div.browser_content div.main_intro ul li:last-of-type:after {
+  display: none;
+}
+
+section.portfolio div.browser_content div.intro {
+  padding: 20px;
+}
+
+section.portfolio div.browser_content div.intro div.picture_details {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+section.portfolio div.browser_content div.intro div.picture_details img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+section.portfolio div.browser_content div.intro div.picture_details h2 {
+  margin: 15px 0 0 0;
+}
+
+section.portfolio div.browser_content div.intro div.picture_details h2,
+section.portfolio div.browser_content div.intro div.picture_details p {
+  font-size: 14px;
+}
+
+section.portfolio div.browser_content div.intro div.intro_description {
+  display: inline-block;
+  width: calc(100% - 250px);
+  padding: 0 0 0 50px;
+}
+
+section.portfolio div.browser_content div.intro h1 {
+  font-weight: 300;
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  text-align: left;
+}
+
+section.portfolio div.browser_content div.intro h2 {
+  font-weight: 300;
+  margin: 15px 0 5px 0;
+  font-size: 24px;
+  text-align: left;
+  color: white;
+}
+
+section.portfolio div.browser_content div.intro h2 span {
+  font-size: 16px;
+  color: black;
+}
+
+section.portfolio div.browser_content div.intro p {
+  font-weight: 300;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+section.portfolio div.browser_content div.intro ul.technos {
+  padding: 0;
+  margin: 30px 0;
+  text-align: left;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  -webkit-box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.angular {
+  background: url(images/logos/angularjs.png) no-repeat center center/38px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.nodejs {
+  background: url(images/logos/nodejs.png) no-repeat center center/50px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.html5 {
+  background: url(images/logos/html5.png) no-repeat center center/28px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.css3 {
+  background: url(images/logos/css3.svg) no-repeat center center/28px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.d3 {
+  background: url(images/logos/d3.png) no-repeat center center/28px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.sass {
+  background: url(images/logos/sass.png) no-repeat center center/35px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.jquery {
+  background: url(images/logos/jquery.png) no-repeat center center/37px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.wordpress {
+  background: url(images/logos/wordpress.png) no-repeat center center/35px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.php {
+  background: url(images/logos/php.png) no-repeat center center/200% 100%;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li.ror {
+  background: url(images/logos/ror.svg) no-repeat center center/25px auto;
+}
+
+section.portfolio div.browser_content div.intro ul.technos li:last-of-type {
+  margin: 0;
+}
+
+section.portfolio div.browser_content div.intro div.links {
+  text-align: center;
+}
+
+section.portfolio div.browser_content div.intro div.links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 18px;
+  border: 1px solid white;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+section.portfolio div.browser_content div.intro div.links a:first-of-type {
+  margin: 0 10px 0 0;
+}
+
+section.portfolio div.browser_content div.intro div.links a:hover {
+  border: 2px solid white;
+  transition: border 0.2s;
+}
+
+section.portfolio div.browser_content div.picture > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+section.portfolio nav.full {
+  display: none;
+}
+
+section.portfolio div.content.full {
+  padding: 20px 0 0 0;
+}
+
+section.portfolio div.content.full div.right {
+  display: block;
+  width: 100%;
+  transition: all 0.7s;
+  margin: 0;
+}
+
+section.portfolio div.content.full div.right div.portfolio_detail > div.browser > div.browser_content {
+  max-height: 480px;
+  min-height: 480px;
+  transition: all 0.7s;
+}
+
+section.portfolio div.content.full div.left {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+}

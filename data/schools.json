@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "name": "LGT Baimbridge",
+      "diploma": "Baccalauréat Scientifique",
+      "start_date": "SEPT 2003",
+      "end_date": "JUIN 2006",
+      "description": "Au sein du Lycée Général et Technologique de Baimbridge, j'ai obtenu un Baccalauréat Scientifique option Physique / Chimie mention Assez Bien, suite à une classe de Seconde option «Initiation au Sciences de l'Ingénieur» et une classe de Première Scientifique"
+    },
+    {
+      "name": "Université Antilles-Guyane",
+      "diploma": "Licence Mathématiques et informatique",
+      "start_date": "SEPT 2006",
+      "end_date": "JUIN 2011",
+      "description": "J'ai intégré la licence MI de l'université Antilles-Guyane sur le campus de Fouillole en Guadeloupe. J'y ai appris les bases de l'informatique avec un cursus axé autour de l'algorithmique et la programmation, l'architecture des ordinateurs ainsi que l'administration de base de données."
+    },
+    {
+      "name": "Université de Limoges",
+      "diploma": "DEUST Webmaster & Gestionnaire d'Intranet",
+      "start_date": "SEPT 2011",
+      "end_date": "JUIN 2013",
+      "description": "Afin d'obtenir une spécialisation dans le web, j'ai souhaité suivre le Dîplome d'Etude Universitaire Scientifique et Technique «Webmaster & Gestionnaire d'Intranet» dispensé en e-learning par l'université de Limoges au sein du campus virtuel TIC."
+    }
+  ]
+}

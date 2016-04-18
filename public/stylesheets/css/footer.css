@@ -1,0 +1,152 @@
+@charset "UTF-8";
+footer {
+  height: 60px;
+}
+
+footer div.footer_content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer div.footer_content p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: white;
+  display: inline-block;
+  font-weight: 300;
+}
+
+footer div.footer_content div.select_languages {
+  position: relative;
+  float: right;
+  margin: -20px 0 0 0;
+}
+
+footer div.footer_content div.select_languages p {
+  cursor: pointer;
+  position: relative;
+  padding: 0 0 0 28px;
+}
+
+footer div.footer_content div.select_languages p.en:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 23px;
+  height: 17px;
+  background: url(images/flags/us@2x.png);
+  background-size: 23px;
+}
+
+footer div.footer_content div.select_languages p.fr:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 23px;
+  height: 17px;
+  background: url(images/flags/fr@2x.png);
+  background-size: 23px;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  margin-left: -60px;
+  width: 100px;
+  background: white;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul li {
+  display: block;
+  margin: 0 0 10px 0;
+  position: relative;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul li:last-of-type {
+  margin: 0;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul li.selected:after {
+  content: "✓";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  color: #5fb232;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul li > p {
+  color: black;
+  position: relative;
+  padding: 0 0 0 28px;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul li > p.en:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 23px;
+  height: 17px;
+  background: url(images/flags/us@2x.png);
+  background-size: 23px;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul li > p.fr:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 23px;
+  height: 17px;
+  background: url(images/flags/fr@2x.png);
+  background-size: 23px;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list ul li > p:hover {
+  text-decoration: underline;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list div.arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  left: 50%;
+  bottom: -11px;
+  margin-left: -11px;
+  border-top-color: white;
+  border-bottom-width: 0;
+}
+
+footer div.footer_content div.select_languages div.dropdown_list div.arrow:after {
+  position: absolute;
+  content: "";
+  border-width: 10px;
+  bottom: 1px;
+  margin-left: -10px;
+  border-top-color: white;
+  border-bottom-width: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-bottom-width: 0;
+}

@@ -1,0 +1,97 @@
+<section class="curriculum" ng-if="curriculumCtrl.dataIsFetched()">
+
+  <!-- Navigation ############################################################################## -->
+  <nav>
+    <ul>
+      <li ng-repeat="item in curriculumCtrl.getNavBarItems()"
+          ng-click="curriculumCtrl.setActiveItem($index)"
+          ng-class="curriculumCtrl.getActiveItemCssClass($index)">
+        {{ item.translation }}
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Skills section ########################################################################## -->
+  <article ng-if="curriculumCtrl.isActiveSection('skills')"
+           class="content_slide skills">
+    <div skill-diagram
+         class="skill_diagram"
+         data-skills="curriculumCtrl.getSkills()"></div>
+  </article>
+
+  <!-- Experiences section ##################################################################### -->
+  <article ng-if="curriculumCtrl.isActiveSection('experiences')"
+           class="content_slide experiences">
+    <ul>
+      <li class="details"
+          ng-click="curriculumCtrl.toggleExperiencesDescription('talentoday')">
+        <div class="details"
+             ng-class="curriculumCtrl.getExperiencesActiveCssClass('talentoday')">
+          <p class="title">{{ "translation.curriculum.experiences.talentoday.job" | translate }}</p>
+          <p class="dates">{{ "translation.curriculum.experiences.talentoday.dates" | translate }}</p>
+          <p class="company">{{ "translation.curriculum.experiences.talentoday.company" | translate }}</p>
+        </div>
+
+        <div class="description"
+             ng-if="curriculumCtrl.isActiveExperience('talentoday')">
+          <p>{{ "translation.curriculum.experiences.talentoday.description" | translate }}</p>
+          <ul class="achievments">
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb1" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb2" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb3" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb4" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb5" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb6" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb7" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb8" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb9" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.talentoday.achievments.nb10" | translate }}</li>
+          </ul>
+        </div>
+      </li><!--
+   --><li class="details"
+          ng-click="curriculumCtrl.toggleExperiencesDescription('grismetal')">
+        <div class="details"
+             ng-class="curriculumCtrl.getExperiencesActiveCssClass('grismetal')">
+          <p class="title">{{ "translation.curriculum.experiences.grismetal.job" | translate }}</p>
+          <p class="dates">{{ "translation.curriculum.experiences.grismetal.dates" | translate }}</p>
+          <p class="company">{{ "translation.curriculum.experiences.grismetal.company" | translate }}</p>
+        </div>
+
+        <div class="description"
+             ng-if="curriculumCtrl.isActiveExperience('grismetal')">
+          <p>{{ "translation.curriculum.experiences.grismetal.description" | translate }}</p>
+          <ul class="achievments">
+            <li>{{ "translation.curriculum.experiences.grismetal.achievments.nb1" | translate }}</li>
+            <li>{{ "translation.curriculum.experiences.grismetal.achievments.nb2" | translate }}</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </article>
+
+  <!-- Education section ####################################################################### -->
+  <article ng-if="curriculumCtrl.isActiveSection('education')"
+           class="content_slide education">
+    <ul>
+      <li ng-repeat="school in curriculumCtrl.getSchools()"
+           class="school">
+        <div class="name">
+          <h2>{{ school.name }}</h2>
+        </div>
+
+        <h3 class="diploma">{{ school.diploma }}</h3>
+
+        <div class="dates">
+          <span class="left">{{ school.start_date }}</span>
+          <a class="link_school" target="_blank" href="http://www.lgtbaimbridge.fr/"></a>
+          <span class="right">{{ school.end_date }}</span>
+        </div>
+
+        <div class="description">
+          <p>{{ school.description }}</p>
+        </div>
+      </li>
+    </ul>
+  </article>
+</section>

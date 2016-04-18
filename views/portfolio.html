@@ -1,0 +1,35 @@
+<section ng-if="portfolioCtrl.dataIsFetched()"
+         class="portfolio">
+  <article class="content_slide">
+    <!-- Navigation ############################################################################## -->
+    <nav ng-class="portfolioCtrl.getFullModeCssClass()">
+      <ul>
+        <li ng-repeat="item in portfolioCtrl.getNavBarItems()"
+            ng-click="portfolioCtrl.setActiveItem($index)"
+            ng-class="portfolioCtrl.getActiveItemCssClass($index)">
+          {{ "translation.portfolio.nav."+ item.name | translate }}
+        </li>
+      </ul>
+    </nav>
+
+    <div class="content"
+         ng-class="portfolioCtrl.getFullModeCssClass()">
+      <div class="left">
+        <ul class="portfolios">
+          <li class="portfolio"
+              ng-class="portfolioCtrl.getPortoflioCssClass($index)"
+              ng-click="portfolioCtrl.toggleActivePortfolio($index, portfolio)"
+              ng-repeat="portfolio in portfolioCtrl.getPorfolios()">
+          </li>
+        </ul>
+        </div><!--
+     --><div class="right">
+          <div portfolio-details
+               class="portfolio_detail"
+               data-full-mode="portfolioCtrl.switchFullModeState()"
+               data-portfolio="portfolioCtrl.getSelectedPortfolio()"
+               data-clear-selected-portfolio="portfolioCtrl.clearSelectedPortfolio()"></div>
+        </div>
+    </div>
+  </article>
+</section>

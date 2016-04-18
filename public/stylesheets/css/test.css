@@ -1,0 +1,137 @@
+.ch-item {
+  width: 150px;
+  height: 150px;
+  margin: 30px auto 0 auto;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+.ch-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.5);
+  transform-origin: 95% 40%;
+  transition: all 0.3s ease-in-out;
+}
+
+a.download_link {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: white;
+  width: 80px;
+  height: 80px;
+  margin: -40px 0 0 -40px;
+  background: #2e8eac url(images/pdf.png) no-repeat center center/100% auto;
+}
+
+.ch-img-1 {
+  background: #2e8eac url(images/ilya_siban.jpg) no-repeat -12px 5px/100% auto;
+}
+
+.ch-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  box-shadow: inset 0 0 0 5px #2e8eac;
+}
+
+.ch-info h3 {
+  color: #2e8eac;
+  position: relative;
+  font-weight: 400;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: translate(11%, -10px) rotate(-97deg);
+}
+
+.ch-info h3 span {
+  height: 60px;
+  position: absolute;
+  width: 150px;
+  left: 0;
+  top: 0px;
+  transform-origin: bottom center;
+}
+
+.char1 {
+  transform: rotate(22.5deg);
+}
+
+.char2 {
+  transform: rotate(45deg);
+}
+
+.char3 {
+  transform: rotate(67.5deg);
+}
+
+.char4 {
+  transform: rotate(90deg);
+}
+
+.char5 {
+  transform: rotate(112.5deg);
+}
+
+.char6 {
+  transform: rotate(135deg);
+}
+
+.char7 {
+  transform: rotate(157.5deg);
+}
+
+.char8 {
+  transform: rotate(180deg);
+}
+
+.char9 {
+  transform: rotate(202.5deg);
+}
+
+.char10 {
+  transform: rotate(225deg);
+}
+
+.char11 {
+  transform: rotate(247.5deg);
+}
+
+.char12 {
+  transform: rotate(270deg);
+}
+
+.char13 {
+  transform: rotate(292.5deg);
+}
+
+.char14 {
+  transform: rotate(315deg);
+}
+
+.char15 {
+  transform: rotate(337.5deg);
+}
+
+.char16 {
+  transform: rotate(360deg);
+}
+
+.ch-item:hover .ch-thumb {
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.5), 0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: rotate(-110deg);
+}

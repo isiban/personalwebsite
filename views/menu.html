@@ -1,0 +1,39 @@
+<header>
+  <div class="header_content">
+    <nav class="main">
+      <ul>
+        <li ng-repeat="item in menuCtrl.getMenuItems()">
+          <a ui-sref="{{ item.sref }}"
+             ui-sref-active-eq="active">
+            <i class="{{ item.icon }}"></i>
+            <span>{{ "translation.menu."+ item.name | translate }}</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <nav class="social_and_languages">
+      <a  ng-if="menuCtrl.isCurrentLanguage('fr')"
+          class="fa-stack fa-lg" href="/pdf/Curriculum_Vitae_ILYA_SIBAN.pdf" target="_blank">
+        <i class="fa fa-stack-1x fa-download"></i>
+      </a>
+      <a  ng-if="menuCtrl.isCurrentLanguage('en')"
+          class="fa-stack fa-lg" href="/pdf/ilya_siban_resume.pdf" target="_blank">
+        <i class="fa fa-stack-1x fa-download"></i>
+      </a>
+
+      <a class="fa-stack fa-lg" href="http://fr.linkedin.com/pub/ilya-siban/45/836/97b" target="_blank">
+        <i class="fa fa-stack-1x fa-linkedin"></i>
+      </a>
+
+      <a class="fa-stack fa-lg" href="https://github.com/isiban" target="_blank">
+        <i class="fa fa-stack-1x fa-github"></i>
+      </a>
+
+      <a class="fa-stack fa-lg" href="https://twitter.com/IlyaSIBAN" target="_blank">
+        <i class="fa fa-stack-1x fa-twitter"></i>
+      </a>
+    </nav>
+  </div>
+</header>

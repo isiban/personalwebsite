@@ -1,0 +1,312 @@
+section.curriculum {
+  padding: 60px 0 0 0;
+
+  nav {
+    max-width: 300px;
+    margin: 30px auto;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    ul {
+      margin: 0;
+      padding: 0 0 15px 0;
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        color: black;
+        cursor: pointer;
+        font-weight: 300;
+
+        &.active { color: white; }
+
+        &:last-of-type { margin: 0; }
+      }
+    }
+  }
+
+  // Skills ########################################################################################
+  article.skills {
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+      width: 10%;
+
+      li {
+        list-style-type: none;
+        display: inline-block;
+        font-weight: 300;
+        margin: 0 10px 10px 0;
+        position: relative;
+        padding: 0 0 0 30px;
+        cursor: pointer;
+
+        &:hover { color: white; }
+        &.active {
+          color: white;
+          font-weight: 400;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          left: 0;
+          top: 50%;
+          margin: -10px  0 0 0;
+          background: white;
+          border: 2px solid white;
+        }
+
+        &.html5:before { background: #bedbe9; }
+        &.css3:before { background: #97be0d; }
+        &.javascript:before { background: #666666; }
+        &.jquery:before { background: #cc4324; }
+        &.angularjs:before { background: #d84f5f; }
+        &.node:before { background: #1c7ae5; }
+        &.d3:before { background: #cc4324; }
+
+        &:last-of-type { margin: 0; }
+      }
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 89%;
+      font-family: "Roboto condensed";
+
+      path { cursor: pointer; }
+
+      text.circle_text {
+        fill: white;
+        font-weight: 300;
+      }
+    }
+  }
+
+  // Expériences  ##################################################################################
+  article.experiences {
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 auto;
+
+      li {
+        margin: 0 auto 20px auto;
+        border-radius: 4px;
+        cursor: pointer;
+
+        div.details {
+          position: relative;
+          padding: 10px 10px 10px 40px;
+
+          &.active:before {
+            content: "\f068";
+            font-family: "FontAwesome";
+          }
+
+          &:before {
+            position: absolute;
+            content: "\f067";
+            font-family: "FontAwesome";
+            width: 20px;
+            height: 20px;
+            color: white;
+            left: 10px;
+            top: 50%;
+            margin: -10px 0 0 0;
+          }
+
+          p.title {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 300;
+            margin: 0;
+            color: white;
+          }
+
+          p.dates {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0;
+            font-weight: 300;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            border-radius: 4px;
+            padding: 5px 10px;
+            color: black;
+            text-transform: capitalize;
+
+            @media (max-width: 500px) {
+              position: relative;
+              display: block;
+              background: none;
+              padding: 0;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          p.company {
+            color: black;
+            margin: 5px 0 8px;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 300;
+            margin: 0;
+          }
+        }
+
+        div.description {
+          padding: 0 0 0 20px;
+          position: relative;
+          padding: 0 10px 0 60px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 40px;
+            top: 0;
+            bottom: 0;
+            border-left: 1px dashed #e1e1e1;
+          }
+
+          p {
+            color: black;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          ul.achievments {
+            padding: 0 0 0 20px;
+
+            li {
+              font-weight: 300;
+              color: #333;
+              margin: 0 0 5px 0;
+              font-style: italic;
+              font-size: 14px;
+
+              &:before {
+                content: "";
+                border-color: transparent #333;
+                border-style: solid;
+                border-width: 0.35em 0 0.35em 0.45em;
+                display: block;
+                height: 0;
+                width: 0;
+                left: -1em;
+                top: 0.9em;
+                position: relative;
+              }
+
+              &:last-of-type { margin: 0; }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Education #####################################################################################
+  article.education {
+
+    ul {
+      display: flex;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    li.school {
+      list-style-type: none;
+      width: -webkit-calc((100% / 3) - 30px);
+      width: calc((100% / 3) - 30px);
+      margin: 0 15px;
+      text-align: center;
+      border-radius: 4px;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+      }
+
+      div.name {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 10px 0;
+
+        h2 {
+          font-size: 18px;
+          line-height: 24px;
+          color: white;
+          font-weight: 300;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      h3.diploma {
+        font-size: 14px;
+        text-align: center;
+        color: black;
+        padding: 10px 0;
+        margin: 0;
+        font-weight: 300;
+      }
+
+      a.link_school {
+        text-decoration: none;
+        width: 90px;
+        height: 90px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid #36a6c9;
+
+        &.baimbridge {
+          background: url(images/logos/schools/lgt_baimbridge.png) no-repeat center center/ 90px auto;
+        }
+      }
+
+      div.dates {
+        padding: 10px;
+        color: white;
+        font-weight: 300;
+        font-size: 14px;
+
+        span { padding: 35px 0 0 0; }
+        span.left { float: left; }
+        span.right { float: right; }
+      }
+
+      div.description {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 25px 10px;
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+          margin: 0;
+          color: black;
+          font-weight: 300;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

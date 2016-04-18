@@ -1,0 +1,122 @@
+section.about {
+  padding: 60px 0 0 0;
+  text-align: center;
+}
+
+section.about img {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin: 30px 0 0 0;
+}
+
+section.about h1 {
+  font-size: 60px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  font-weight: 300;
+  margin: 20px 0 0 0;
+}
+
+section.about h2 {
+  font-size: 44px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  font-weight: 300;
+  margin: 0 0 40px 0;
+}
+
+section.about ul.technos {
+  padding: 0;
+  margin: 0 0  40px 0;
+  list-style-type: none;
+}
+
+section.about ul.technos li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid white;
+  -webkit-box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+section.about ul.technos li.angular {
+  background: url(images/logos/angularjs.png) no-repeat center center/47px auto;
+  animation: animationTechnos 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+section.about ul.technos li.nodejs {
+  background: url(images/logos/nodejs.png) no-repeat center center/50px auto;
+  animation: animationTechnos 0.4s;
+  animation-timing-function: ease-in-out;
+}
+
+section.about ul.technos li.html5 {
+  background: url(images/logos/html5.png) no-repeat center center/35px auto;
+  animation: animationTechnos 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+section.about ul.technos li.css3 {
+  background: url(images/logos/css3.svg) no-repeat center center/35px auto;
+  animation: animationTechnos 0.8s;
+  animation-timing-function: ease-in-out;
+}
+
+section.about ul.technos li.d3js {
+  background: url(images/logos/d3.png) no-repeat center center/37px auto;
+  animation: animationTechnos 1s;
+  animation-timing-function: ease-in-out;
+}
+
+section.about ul.technos li.sass {
+  background: url(images/logos/sass.png) no-repeat center center/42px auto;
+  animation: animationTechnos 1.2s;
+  animation-timing-function: ease-in-out;
+}
+
+section.about ul.technos li:last-of-type {
+  margin: 0;
+}
+
+section.about a.portfolio_link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 24px;
+  border: 1px solid white;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+section.about a.portfolio_link:hover {
+  border: 2px solid white;
+  transition: border 0.2s;
+}
+
+@keyframes animationTechnos {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 100%, 0px);
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateZ(0px);
+  }
+}

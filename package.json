@@ -1,0 +1,48 @@
+{
+  "name": "ilyasiban-perso",
+  "version": "0.0.0",
+  "description": "This is my personal website where you will be able to find my CV and other stuff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilya SIBAN",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-touch": "^1.5.3",
+    "angular-translate": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-ui-router": "^0.2.18",
+    "d3": "^3.5.16",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-yaml": "^1.0.1",
+    "bulk-require": "^0.2.1",
+    "bulkify": "^1.2.0"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.4",
+    "gulp-angular-protractor": "^0.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-connect": "^2.2.0",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-notify": "^2.2.0",
+    "jshint": "^2.9.1",
+    "protractor": "^3.2.1",
+    "tiny-lr": "^0.2.1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "gulp default"
+  }
+}

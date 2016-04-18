@@ -1,0 +1,6 @@
+{
+  "curly": true,
+  "strict": true,
+  "undef": true,
+  "unused": true
+}
