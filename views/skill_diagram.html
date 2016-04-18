@@ -2,8 +2,7 @@
   <li ng-repeat="skill in skillDiagramCtrl.getSkills()"
       ng-class="skillDiagramCtrl.getSkillCssClass($index)"
       ng-mouseenter="skillDiagramCtrl.highLightSkill($index)"
-      ng-mouseleave="skillDiagramCtrl.highLightSkill($index)"
-      ng-click="skillDiagramCtrl.highLightSkill($index)">
+      ng-mouseleave="skillDiagramCtrl.highLightSkill($index)">
     {{ skill.name }}
   </li>
 </ul>
