@@ -59,7 +59,10 @@ section.portfolio {
     background: rgba(0, 0, 0, 0.2);
     margin: 0 0 0 50px;
 
-    @media (max-width: 767px) { width: 100%; }
+    @media (max-width: 767px) {
+      width: 100%;
+      margin: 0;
+    }
   }
 
   div.left > ul.portfolios {

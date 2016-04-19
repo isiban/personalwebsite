@@ -74,6 +74,7 @@ section.portfolio div.right {
 @media (max-width: 767px) {
   section.portfolio div.right {
     width: 100%;
+    margin: 0;
   }
 }
 
