@@ -25,8 +25,10 @@
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.2.0",
+    "gulp-imagemin": "^2.4.0",
     "gulp-load-plugins": "^1.2.2",
     "gulp-sass": "^2.1.1",
+    "gulp-sequence": "^0.4.5",
     "gulp-yaml": "^1.0.1"
   },
   "devDependencies": {
