@@ -30,6 +30,8 @@
     res.sendFile(__dirname + "/build/index.html");
   });
 
-  server.listen(process.env.PORT || config.port);
+  server.listen(config.port, function () {
+    console.log("Listening on port: " + config.port);
+  });
 
 })();
