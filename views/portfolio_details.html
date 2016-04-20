@@ -8,7 +8,7 @@
          ng-click="portfolioDetailsCtrl.switchFullMode()"></a><!--
    --><button class="prev"
               ng-click="portfolioDetailsCtrl.swipePrevScreen()"
-              ng-disabled="!portfolioDetailsCtrl.isPhotoSwipeActive()"></button><!--
+              ng-disabled="!portfolioDetailsCtrl.getPrevButtonStatus()"></button><!--
    --><button class="next"
               ng-disabled="!portfolioDetailsCtrl.getNextButtonStatus()"
               ng-click="portfolioDetailsCtrl.swipeNextScreen()"></button>
@@ -75,12 +75,21 @@
     </div>
 
     <!-- Pictures slide #########################################################################-->
-    <div class="picture"
-         ng-swipe-left="portfolioDetailsCtrl.swipeNextScreen()"
+    <div ng-if="portfolioDetailsCtrl.isPhotoSwipeActive()"
+         class="picture">
+      <a class="left_arrow"
+         ng-click="portfolioDetailsCtrl.swipePrevScreen()">
+        <span></span>
+      </a>
+      <a class="right_arrow"
+         ng-click="portfolioDetailsCtrl.swipeNextScreen()">
+        <span></span>
+      </a>
+      <img ng-swipe-left="portfolioDetailsCtrl.swipeNextScreen()"
          ng-swipe-right="portfolioDetailsCtrl.swipePrevScreen()"
          ng-if="portfolioDetailsCtrl.isPhotoSwipeActive() && portfolioDetailsCtrl.isActiveSlide($index)"
-         ng-repeat="picture in portfolioDetailsCtrl.getPortfolio().images">
-      <img title="{{ picture.title }}" ng-src="{{ picture.ref }}"/>
+         ng-repeat="picture in portfolioDetailsCtrl.getPortfolio().images"
+         ng-src="{{ picture.ref }}"/>
     </div>
   </div>
 </div>
