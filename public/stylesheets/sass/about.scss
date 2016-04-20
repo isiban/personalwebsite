@@ -2,36 +2,87 @@ section.about {
   padding: 60px 0 0 0;
   text-align: center;
 
-  img {
-    display: inline-block;
-    vertical-align: top;
-    width: 100px;
-    height: 100px;
-    border: 5px solid white;
+  div.thumbnail {
+    width: 150px;
+    height: 150px;
+    margin: 30px auto 0 auto;
     border-radius: 50%;
-    margin: 30px 0 0 0;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0.5px 0.5px 0.5px rgba(0,0,0,0.25);
+
+    &:hover > div.picture {
+      box-shadow: inset 0 0 0 5px rgba(255,255,255, 0.5), 0 1px 3px rgba(0,0,0,0.2);
+      transform: rotate(-110deg);
+    }
+
+    div.info {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: white;
+      box-shadow: inset 0 0 0 5px rgba(46, 142, 172, 1);
+
+      h3 {
+        color: #2e8eac;
+        font-weight: 400;
+        width: 100%;
+        height: 100%;
+        display: block;
+        transform: translate(11%, -10px) rotate(-97deg);
+
+        span {
+          position: absolute;
+          width: 150px;
+          height: 60px;
+          left: 0;
+          top: 0px;
+          transform-origin: bottom center;
+        }
+      }
+    }
+
+    a.download_link {
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      background: white;
+      width: 80px;
+      height: 80px;
+      margin: -40px 0 0 -40px;
+      background: #2e8eac url(images/pdf.png) no-repeat center center/ 100% auto;
+    }
+
+    div.picture {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      box-shadow: inset 0 0 0 5px rgba(255,255,255, 0.5);
+      transform-origin: 95% 40%;
+      transition: all 0.3s ease-in-out;
+      background: #2e8eac url(images/ilya_siban.jpg) no-repeat -12px 5px / 100% auto;
+    }
   }
 
   h1 {
     font-size: 60px;
-    font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    font-weight: 300;
     margin: 20px 0 0 0;
   }
 
   h2 {
     font-size: 44px;
-    font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    font-weight: 300;
     margin: 0 0 40px 0;
   }
 
   ul.technos {
-    padding: 0;
-    margin: 0 0  40px 0;
-    list-style-type: none;
+    margin: 0 0 40px 0;
 
     li {
       display: inline-block;
@@ -40,51 +91,41 @@ section.about {
       height: 50px;
       border-radius: 50%;
       border: 5px solid white;
-      -webkit-box-shadow: 0px 0.5px 0.5px 0.5px rgba(0,0,0,0.25);
-      -moz-box-shadow: 0px 0.5px 0.5px 0.5px rgba(0,0,0,0.25);
       box-shadow: 0px 0.5px 0.5px 0.5px rgba(0,0,0,0.25);
+
+      &:last-of-type { margin: 0; }
 
       &.angular {
         background: url(images/logos/angularjs.png) no-repeat center center / 47px auto;
-        animation: animationTechnos 0.2s;
-        animation-timing-function:ease-in-out;
+        animation: animationTechnos 0.2s ease-in-out;
       }
       &.nodejs {
         background: url(images/logos/nodejs.png) no-repeat center center / 50px auto;
-        animation: animationTechnos 0.4s;
-        animation-timing-function:ease-in-out;
+        animation: animationTechnos 0.4s ease-in-out;
       }
       &.html5 {
         background: url(images/logos/html5.png) no-repeat center center / 35px auto;
-        animation: animationTechnos 0.6s;
-        animation-timing-function:ease-in-out;
+        animation: animationTechnos 0.6s ease-in-out;
       }
       &.css3 {
         background: url(images/logos/css3.svg) no-repeat center center / 35px auto;
-        animation: animationTechnos 0.8s;
-        animation-timing-function:ease-in-out;
+        animation: animationTechnos 0.8s ease-in-out;
       }
       &.d3js {
         background: url(images/logos/d3.png) no-repeat center center / 37px auto;
-        animation: animationTechnos 1s;
-        animation-timing-function:ease-in-out;
+        animation: animationTechnos 1s ease-in-out;
       }
       &.sass {
         background: url(images/logos/sass.png) no-repeat center center / 42px auto;
-        animation: animationTechnos 1.2s;
-        animation-timing-function:ease-in-out;
+        animation: animationTechnos 1.2s ease-in-out;
       }
-
-      &:last-of-type { margin: 0; }
     }
   }
 
   a.portfolio_link {
     color: white;
-    text-decoration: none;
     padding: 10px 15px;
     border-radius: 4px;
-    font-weight: 300;
     font-size: 24px;
     border: 1px solid white;
     display: inline-block;
@@ -97,21 +138,30 @@ section.about {
   }
 }
 
+@for $i from 1 through 16 {
+  $num-letters: 8;
+  $angle-span: 180deg;
+  $angle-offset: 0deg;
+  $angle-per-char: $angle-span / $num-letters;
+
+  @function lettering( $i ) {
+    @return rotate( $angle-offset + $angle-per-char * $i );
+  }
+
+  .char#{ $i } {
+    transform: lettering( $i );
+  }
+}
+
 @keyframes animationTechnos {
   0% {
     opacity: 0;
     transform: translate3d(0px, 100%, 0px);
   }
-  50% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0.5;
-  }
+  50% { opacity: 0; }
+  70% { opacity: 0.5; }
   100% {
     opacity: 1;
     transform: scale(1) translateZ(0px)
   }
 }
-
-

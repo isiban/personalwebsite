@@ -29,9 +29,23 @@ h2,
 h3,
 h4,
 p,
+a,
 input,
 textarea {
   font-family: "Roboto condensed";
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 div.main_container {
