@@ -72,8 +72,8 @@
 
         var skills = ctrl.getSkills(),
             config = {
-              width: 900,
-              height: 500,
+              width: 1000,
+              height: 1000,
               radius: 100,
               spaceBeetweenArc: 20,
               circleText: "Skills"
@@ -92,16 +92,13 @@
         };
 
         // Create svg element from directive declaration
-        var svg = d3.select(element[0])
+        var svg = d3.select("#diagram_container")
                     .append("svg:svg")
                     .attr("width", "100%")
-                    .attr("height", "440")
-                    .attr("viewBox", "0 0 " + config.width * 2 + " " + config.height * 2 )
-                    .attr("preserveAspectRatio", "xMidYMin meet")
-                    .append("svg:g")
-                    .attr("width", "100%")
                     .attr("height", "100%")
-                    .attr("transform", "translate(" + config.width / 2 + "," + config.height / 2 + ")");
+                    .attr("viewBox", "0 0 " + config.width + " " + config.height)
+                    .attr("preserveAspectRatio", "xMidYMin meet")
+                    .append("svg:g");
 
         var circleContainer = svg.append("svg:g");
 
@@ -112,7 +109,7 @@
                         .style("fill", "#193340")
                         .attr("r", config.radius)
                         .attr("cx", config.width / 2)
-                        .attr("cy", config.width / 4);
+                        .attr("cy", config.height / 2);
 
         // Create and append the circle's text
         var initialText = circleContainer
@@ -120,7 +117,7 @@
                           .style("text-anchor", "middle")
                           .attr("dy", 12)
                           .attr("x", config.width / 2)
-                          .attr("y", config.width / 4)
+                          .attr("y", config.height / 2)
                           .style("font-size", function () { return getFontSize(config.circleText); })
                           .text(function () { return config.circleText })
                           .attr("class", "circle_text");
@@ -159,7 +156,7 @@
              .attr("fill", skill.color)
              .style("stroke", skill.color)
              .style("stroke-width", 15)
-             .attr("transform", "translate(" + config.width / 2 + "," + config.width / 4 + ")")
+             .attr("transform", "translate(" + config.width / 2 + "," + config.height / 2 + ")")
              .on("mouseover", function () {
                 var currentPath = d3.select(this),
                     circleText = d3.select(".circle_text");
@@ -183,7 +180,7 @@
                  .text(function () { return skill.percentage + "%" })
                  .style("font-size", "30px")
                  .attr("x", config.width / 2)
-                 .attr("y", config.width / 4)
+                 .attr("y", config.height / 2)
                  .attr("dy", 50);
              })
              .on("mouseout", function () {
@@ -222,7 +219,6 @@
         });
 
         var mouseOverFunction = function (selector) {
-
           var currentPath = d3.select("path." + selector.name.toLowerCase()),
               circleText = d3.select(".circle_text");
 
@@ -245,12 +241,11 @@
            .text(function () { return selector.percentage + "%" })
            .style("font-size", "30px")
            .attr("x", config.width / 2)
-           .attr("y", config.width / 4)
+           .attr("y", config.height / 2)
            .attr("dy", 50);
         }
 
         var mouseOutFunction = function (selector) {
-
           if (selector === undefined) { return; }
 
           var currentPath = d3.select("path." + selector.name.toLowerCase()),
@@ -269,7 +264,6 @@
             return getFontSize(config.circleText);
           });
         }
-
       }
     }
   };

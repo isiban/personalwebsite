@@ -31,12 +31,21 @@ section.curriculum nav ul li:last-of-type {
   margin: 0;
 }
 
+section.curriculum article.skills {
+  margin: -30px auto 0 auto;
+}
+
 section.curriculum article.skills ul {
   padding: 0;
   margin: 0;
-  display: inline-block;
-  vertical-align: middle;
-  width: 10%;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  section.curriculum article.skills ul {
+    display: block;
+  }
 }
 
 section.curriculum article.skills ul li {
@@ -49,13 +58,18 @@ section.curriculum article.skills ul li {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  section.curriculum article.skills ul li {
+    width: 50%;
+  }
+}
+
 section.curriculum article.skills ul li:hover {
   color: white;
 }
 
 section.curriculum article.skills ul li.active {
   color: white;
-  font-weight: 400;
 }
 
 section.curriculum article.skills ul li:before {
@@ -103,10 +117,25 @@ section.curriculum article.skills ul li:last-of-type {
   margin: 0;
 }
 
+section.curriculum article.skills div#diagram_container {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  section.curriculum article.skills div#diagram_container {
+    width: 100%;
+  }
+}
+
 section.curriculum article.skills svg {
   display: inline-block;
   vertical-align: middle;
-  width: 89%;
+  width: 100%;
+  max-width: 515px;
+  height: auto;
+  margin: 0 auto;
   font-family: "Roboto condensed";
 }
 
