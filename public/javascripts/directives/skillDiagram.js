@@ -63,13 +63,6 @@
         skills: "="
       },
       link: function (scope, element, attrs, ctrl) {
-        // Extend d3 selection with a moveToFront property
-        d3.selection.prototype.moveToFront = function() {
-          return this.each(function(){
-            this.parentNode.appendChild(this);
-          });
-        }
-
         var skills = ctrl.getSkills(),
             config = {
               width: 1000,
@@ -79,9 +72,16 @@
               circleText: "Skills"
             };
 
+        // Extend d3 selection with a moveToFront property
+        d3.selection.prototype.moveToFront = function() {
+          return this.each(function(){
+            this.parentNode.appendChild(this);
+          });
+        }
+
         var getFontSize = function (element) {
            var len = element.length,
-               size = config.radius / 3;
+               size = config.radius / 4;
 
           if (element.length >= 7) {
             size *= 10 / len;
@@ -90,6 +90,72 @@
             return "30px";
           }
         };
+
+        var mouseOverFunction = function (selector) {
+          var currentPath = {},
+              circleText = d3.select(".circle_text");
+
+          if (selector.hasOwnProperty("name")) {
+            currentPath = d3.select("path." + selector.name.toLowerCase());
+          } else {
+            currentPath = d3.select(selector);
+          }
+
+          currentPath
+            .transition()
+            .duration(500)
+            .style("stroke-width", 45)
+            .style("opacity", 0.75);
+
+          currentPath.moveToFront();
+
+          circleText.text(function () {
+            return currentPath[0][0].getAttribute("data-name");
+          })
+          .style("font-size", function () {
+            return getFontSize(currentPath[0][0].getAttribute("data-name"));
+          })
+          .attr("dy", 0);
+
+          circleText.append("tspan")
+           .text(function () {
+            if (selector.hasOwnProperty("name")) {
+              return selector.percentage + "%"
+            }
+            return currentPath[0][0].getAttribute("data-percentage") + "%";
+          })
+           .style("font-size", "30px")
+           .attr("x", config.width / 2)
+           .attr("y", config.height / 2)
+           .attr("dy", 50);
+        };
+
+
+        var mouseOutFunction = function (selector) {
+          var currentPath = {},
+              circleText = d3.select(".circle_text");
+
+          if (selector.hasOwnProperty("name")) {
+            currentPath = d3.select("path." + selector.name.toLowerCase());
+          } else {
+            currentPath = d3.select(selector);
+          }
+
+          currentPath
+            .transition()
+            .duration(500)
+            .style("stroke-width", 15)
+            .style("opacity", 1);
+
+          circleText.text(function () {
+            return config.circleText;
+          })
+          .style("font-size", function () {
+            return getFontSize(config.circleText);
+          })
+          .attr("dy", 12);
+        };
+
 
         // Create svg element from directive declaration
         var svg = d3.select("#diagram_container")
@@ -104,23 +170,27 @@
 
         // Append first circle to the svg
         var firstCircle = circleContainer
-                        .append("circle")
-                        .style("stroke", "none")
-                        .style("fill", "#193340")
-                        .attr("r", config.radius)
-                        .attr("cx", config.width / 2)
-                        .attr("cy", config.height / 2);
+                            .append("svg:circle")
+                            .style("stroke", "none")
+                            .attr("fill", "#24a79e");
+
+        firstCircle.transition()
+                   .duration(1000)
+                   .style("fill", "#193340")
+                   .attr("r", config.radius)
+                   .attr("cx", config.width / 2)
+                   .attr("cy", config.height / 2);
 
         // Create and append the circle's text
         var initialText = circleContainer
-                          .append("svg:text")
-                          .style("text-anchor", "middle")
-                          .attr("dy", 12)
-                          .attr("x", config.width / 2)
-                          .attr("y", config.height / 2)
-                          .style("font-size", function () { return getFontSize(config.circleText); })
-                          .text(function () { return config.circleText })
-                          .attr("class", "circle_text");
+                            .append("svg:text")
+                            .style("text-anchor", "middle")
+                            .attr("dy", 12)
+                            .attr("x", config.width / 2)
+                            .attr("y", config.height / 2)
+                            .style("font-size", function () { return getFontSize(config.circleText); })
+                            .text(function () { return config.circleText })
+                            .attr("class", "circle_text");
 
         var inner = config.radius + config.spaceBeetweenArc,
             outer = inner + 30,
@@ -148,63 +218,28 @@
                       .startAngle(start)
                       .endAngle(end);
 
-          svg.append("path")
-             .attr("d", arc)
-             .attr("class", skill.name.toLowerCase())
-             .attr("data-name", skill.name)
-             .attr("data-percentage", skill.percentage)
-             .attr("fill", skill.color)
-             .style("stroke", skill.color)
-             .style("stroke-width", 15)
-             .attr("transform", "translate(" + config.width / 2 + "," + config.height / 2 + ")")
-             .on("mouseover", function () {
-                var currentPath = d3.select(this),
-                    circleText = d3.select(".circle_text");
+          var path = svg.append("svg:path")
+                        .attr("d", arc)
+                        .attr("class", skill.name.toLowerCase())
+                        .attr("data-name", skill.name)
+                        .attr("data-percentage", skill.percentage)
+                        .attr("fill", "#24a79e")
+                        .style("stroke", "#24a79e")
+                        .style("opacity", "0")
+                        .attr("transform", "translate(" + config.width / 2 + "," + config.height / 2 + ")")
+                        .on("mouseover", function () { mouseOverFunction(this); })
+                        .on("mouseout", function () { mouseOutFunction(this); });
 
-                currentPath
-                  .transition()
-                  .duration(300)
-                  .style("stroke-width", 45)
-                  .style("opacity", 0.75);
-
-                currentPath.moveToFront();
-
-                circleText.text(function () {
-                  return currentPath[0][0].getAttribute("data-name");
-                })
-                .style("font-size", function () {
-                  return getFontSize(currentPath[0][0].getAttribute("data-name"));
-                });
-
-                circleText.append("tspan")
-                 .text(function () { return skill.percentage + "%" })
-                 .style("font-size", "30px")
-                 .attr("x", config.width / 2)
-                 .attr("y", config.height / 2)
-                 .attr("dy", 50);
-             })
-             .on("mouseout", function () {
-                var currentPath = d3.select(this),
-                    circleText = d3.select(".circle_text");
-
-                currentPath
-                  .transition()
-                  .duration(300)
-                  .style("stroke-width", 15)
-                  .style("opacity", 1);
-
-                circleText.text(function () {
-                  return config.circleText;
-                })
-                .style("font-size", function () {
-                  return getFontSize(config.circleText);
-                });
-             });
+          path.transition()
+              .duration(1000)
+              .delay(200)
+              .attr("fill", skill.color)
+              .style("stroke", skill.color)
+              .style("stroke-width", 15)
+              .style("opacity", 1)
         });
 
-
         scope.$watchCollection(function(scope) { return scope.highLightedSkill }, function (newVal, oldVal) {
-
           if (oldVal !== newVal) {
             if (oldVal === undefined ) {
               mouseOverFunction(newVal);
@@ -218,52 +253,6 @@
           }
         });
 
-        var mouseOverFunction = function (selector) {
-          var currentPath = d3.select("path." + selector.name.toLowerCase()),
-              circleText = d3.select(".circle_text");
-
-          currentPath
-            .transition()
-            .duration(300)
-            .style("stroke-width", 45)
-            .style("opacity", 0.75);
-
-          currentPath.moveToFront();
-
-          circleText.text(function () {
-            return currentPath[0][0].getAttribute("data-name");
-          })
-          .style("font-size", function () {
-            return getFontSize(currentPath[0][0].getAttribute("data-name"));
-          });
-
-          circleText.append("tspan")
-           .text(function () { return selector.percentage + "%" })
-           .style("font-size", "30px")
-           .attr("x", config.width / 2)
-           .attr("y", config.height / 2)
-           .attr("dy", 50);
-        }
-
-        var mouseOutFunction = function (selector) {
-          if (selector === undefined) { return; }
-
-          var currentPath = d3.select("path." + selector.name.toLowerCase()),
-              circleText = d3.select(".circle_text");
-
-          currentPath
-            .transition()
-            .duration(300)
-            .style("stroke-width", 15)
-            .style("opacity", 1);
-
-          circleText.text(function () {
-            return config.circleText;
-          })
-          .style("font-size", function () {
-            return getFontSize(config.circleText);
-          });
-        }
       }
     }
   };
