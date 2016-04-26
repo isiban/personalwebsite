@@ -1,17 +1,20 @@
 ;(function() {
   "use strict";
 
-  require("angular");
-
+  /**
+   * [curriculumController description]
+   * @param  {[type]} $scope     [description]
+   * @param  {[type]} $rootScope [description]
+   * @param  {[type]} $filter    [description]
+   * @param  {[type]} $translate [description]
+   * @param  {[type]} fetchData  [description]
+   * @return {[type]}            [description]
+   */
   function curriculumController ($scope, $rootScope, $filter, $translate, fetchData) {
     var _experiences = {},
       _schools = {},
       _skills = {},
-      _dataFetched = {
-        experiences: false,
-        schools: false,
-        skills: false
-      },
+      _dataFetched = false,
       _navBar = [
         {
           name: "skills",
@@ -32,26 +35,14 @@
 
 
     var init = function() {
-      fetchData.fetch("/api/schools").then(function (response) {
-        _schools = response.data;
-        _dataFetched.schools = true;
-      });
-
       fetchData.fetch("/api/skills").then(function (response) {
         _skills = response.data;
-        _dataFetched.skills = true;
+        _dataFetched = true;
       });
     }
 
     init();
 
-    /**
-     * [getSchools description]
-     * @return {[type]} [description]
-     */
-    this.getSchools = function () {
-      return _schools;
-    };
 
     /**
      * [getSkills description]
@@ -66,7 +57,7 @@
      * @return {[type]} [description]
      */
     this.dataIsFetched = function () {
-      return _dataFetched.schools && _dataFetched.skills;
+      return _dataFetched;
     };
 
     /**

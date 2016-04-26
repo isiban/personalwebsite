@@ -79,6 +79,41 @@ translation:
             - http://proaidautisme.org"
           nb2: "Organized and lead training seminars for agency clients."
 
+    education:
+      limoges:
+        title: "Université de Limoges"
+        diploma: "DEUST Webmaster & Gestionnaire d'Intranet"
+        dates:
+          start: "Sept 2011"
+          end: "Juin 2013"
+        website: "http://www.unilim.fr/"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac neque eget augue faucibus
+          iaculis eget in nibh. In euismod et tortor eget mattis. Integer eget odio massa. Aliquam eget
+          imperdiet ex, eget pulvinar quam. Quisque massa dolor, volutpat posuere."
+      uag:
+        title: "Université des Antilles-Guyane"
+        diploma: "Licence Mathématiques & Informatique"
+        dates:
+          start: "Sept 2006"
+          end: "Juin 2011"
+        website: "http://www.univ-ag.fr"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac neque eget augue faucibus
+          iaculis eget in nibh. In euismod et tortor eget mattis. Integer eget odio massa. Aliquam eget
+          imperdiet ex, eget pulvinar quam. Quisque massa dolor, volutpat posuere."
+      baimbridge:
+        title: "Lycée Baimbridge"
+        diploma: "Baccalauréat Scientifique"
+        dates:
+          start: "Sept 2003"
+          end: "Juin 2006"
+        website: "http://www.lgtbaimbridge.fr/"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac neque eget augue faucibus
+          iaculis eget in nibh. In euismod et tortor eget mattis. Integer eget odio massa. Aliquam eget
+          imperdiet ex, eget pulvinar quam. Quisque massa dolor, volutpat posuere."
+
   contact:
     form:
       last_name: "Nom"

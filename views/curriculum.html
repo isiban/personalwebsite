@@ -74,22 +74,67 @@
   <article ng-if="curriculumCtrl.isActiveSection('education')"
            class="content_slide education">
     <ul>
-      <li ng-repeat="school in curriculumCtrl.getSchools()"
-           class="school">
+      <li class="school">
         <div class="name">
-          <h2>{{ school.name }}</h2>
+          <h2>{{ "translation.curriculum.education.limoges.title" | translate }}</h2>
         </div>
 
-        <h3 class="diploma">{{ school.diploma }}</h3>
+        <h3 class="diploma">
+          {{ "translation.curriculum.education.limoges.diploma" | translate }}
+        </h3>
 
         <div class="dates">
-          <span class="left">{{ school.start_date }}</span>
-          <a class="link_school" target="_blank" href="http://www.lgtbaimbridge.fr/"></a>
-          <span class="right">{{ school.end_date }}</span>
+          <span class="left">{{ "translation.curriculum.education.limoges.dates.start" | translate }}</span>
+          <a class="link_school"
+             target="_blank"
+             ng-href='{{ "translation.curriculum.education.limoges.website" | translate }}'></a>
+          <span class="right">{{ "translation.curriculum.education.limoges.dates.end" | translate }}</span>
         </div>
 
         <div class="description">
-          <p>{{ school.description }}</p>
+          <p>{{ "translation.curriculum.education.limoges.description" | translate }}</p>
+        </div>
+      </li><!--
+   --> <li class="school">
+        <div class="name">
+          <h2>{{ "translation.curriculum.education.uag.title" | translate }}</h2>
+        </div>
+
+        <h3 class="diploma">
+          {{ "translation.curriculum.education.uag.diploma" | translate }}
+        </h3>
+
+        <div class="dates">
+          <span class="left">{{ "translation.curriculum.education.uag.dates.start" | translate }}</span>
+          <a class="link_school"
+             target="_blank"
+             ng-href='{{ "translation.curriculum.education.uag.website" | translate }}'></a>
+          <span class="right">{{ "translation.curriculum.education.uag.dates.end" | translate }}</span>
+        </div>
+
+        <div class="description">
+          <p>{{ "translation.curriculum.education.uag.description" | translate }}</p>
+        </div>
+      </li><!--
+   --><li class="school">
+        <div class="name">
+          <h2>{{ "translation.curriculum.education.baimbridge.title" | translate }}</h2>
+        </div>
+
+        <h3 class="diploma">
+          {{ "translation.curriculum.education.baimbridge.diploma" | translate }}
+        </h3>
+
+        <div class="dates">
+          <span class="left">{{ "translation.curriculum.education.baimbridge.dates.start" | translate }}</span>
+          <a class="link_school"
+             target="_blank"
+             ng-href='{{ "translation.curriculum.education.baimbridge.website" | translate }}'></a>
+          <span class="right">{{ "translation.curriculum.education.baimbridge.dates.end" | translate }}</span>
+        </div>
+
+        <div class="description">
+          <p>{{ "translation.curriculum.education.baimbridge.description" | translate }}</p>
         </div>
       </li>
     </ul>

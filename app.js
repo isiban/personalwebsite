@@ -18,12 +18,10 @@
 
   // Route API
   var portfolios = require("./routes/portfolios"),
-      schools = require("./routes/schools"),
       skills = require("./routes/skills");
 
 
   app.use("/api/portfolios", portfolios);
-  app.use("/api/schools", schools);
   app.use("/api/skills", skills);
 
   app.get("*", function (req, res) {

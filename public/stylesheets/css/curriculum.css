@@ -286,6 +286,12 @@ section.curriculum article.education ul {
   margin: 0;
 }
 
+@media (max-width: 920px) {
+  section.curriculum article.education ul {
+    display: block;
+  }
+}
+
 section.curriculum article.education li.school {
   list-style-type: none;
   width: -webkit-calc((100% / 3) - 30px);
@@ -295,10 +301,36 @@ section.curriculum article.education li.school {
   border-radius: 4px;
 }
 
+@media (max-width: 920px) {
+  section.curriculum article.education li.school {
+    display: inline-block;
+    width: -webkit-calc((100% / 2) - 30px);
+    width: calc((100% / 2) - 30px);
+    vertical-align: top;
+  }
+  section.curriculum article.education li.school:first-of-type {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
 @media (max-width: 767px) {
   section.curriculum article.education li.school {
     width: 100%;
     max-width: 300px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+  section.curriculum article.education li.school:first-of-type {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  section.curriculum article.education li.school {
+    width: 100%;
+    max-width: none;
     margin: 0 auto 20px auto;
   }
 }
