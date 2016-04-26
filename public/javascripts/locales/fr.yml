@@ -88,9 +88,9 @@ translation:
           end: "Juin 2013"
         website: "http://www.unilim.fr/"
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac neque eget augue faucibus
-          iaculis eget in nibh. In euismod et tortor eget mattis. Integer eget odio massa. Aliquam eget
-          imperdiet ex, eget pulvinar quam. Quisque massa dolor, volutpat posuere."
+          "Afin d'obtenir une spécialisation dans le web, j'ai souhaité suivre le Dîplome d'Etude
+          Universitaire Scientifique et Technique «Webmaster & Gestionnaire d'Intranet» dispensé en
+          E-learning par l'université de Limoges au sein du campus virtuel TIC."
       uag:
         title: "Université des Antilles-Guyane"
         diploma: "Licence Mathématiques & Informatique"
@@ -99,9 +99,10 @@ translation:
           end: "Juin 2011"
         website: "http://www.univ-ag.fr"
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac neque eget augue faucibus
-          iaculis eget in nibh. In euismod et tortor eget mattis. Integer eget odio massa. Aliquam eget
-          imperdiet ex, eget pulvinar quam. Quisque massa dolor, volutpat posuere."
+          "J'ai intégré la licence MI de l'université Antilles-Guyane sur le campus de Fouillole en
+          Guadeloupe. J'y ai appris les bases de l'informatique avec un cursus axé autour de
+          l'algorithmique et la programmation, l'architecture des ordinateurs ainsi que l'administration
+          de base de données."
       baimbridge:
         title: "Lycée Baimbridge"
         diploma: "Baccalauréat Scientifique"
@@ -110,9 +111,9 @@ translation:
           end: "Juin 2006"
         website: "http://www.lgtbaimbridge.fr/"
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac neque eget augue faucibus
-          iaculis eget in nibh. In euismod et tortor eget mattis. Integer eget odio massa. Aliquam eget
-          imperdiet ex, eget pulvinar quam. Quisque massa dolor, volutpat posuere."
+          "Au sein du Lycée Général et Technologique de Baimbridge, j'ai obtenu un Baccalauréat
+          Scientifique option Physique / Chimie mention Assez Bien, suite à une classe de Seconde option
+          «Initiation au Sciences de l'Ingénieur» et une classe de Première Scientifique"
 
   contact:
     form:
