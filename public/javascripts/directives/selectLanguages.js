@@ -1,8 +1,6 @@
 ;(function () {
   "use strict";
 
-  require("angular");
-
   /**
    * [selectLanguagesController description]
    * @param  {[type]} $scope [description]

@@ -1,8 +1,6 @@
 ;(function() {
   "use strict";
 
-  require("angular");
-
   /**
    * [portfolioController description]
    * @param  {[type]} $scope       [description]

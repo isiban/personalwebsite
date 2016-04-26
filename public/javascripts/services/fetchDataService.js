@@ -1,8 +1,12 @@
 ;(function() {
   "use strict";
 
-  require("angular");
-
+  /**
+   * [fetchData description]
+   * @param  {[type]} $http [description]
+   * @param  {[type]} $q    [description]
+   * @return {[type]}       [description]
+   */
   var fetchData = function ($http, $q) {
 
     /**

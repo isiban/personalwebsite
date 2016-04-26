@@ -1,8 +1,11 @@
 ;(function() {
   "use strict";
 
-  require("angular");
-
+  /**
+   * [contactController description]
+   * @param  {[type]} $scope [description]
+   * @return {[type]}        [description]
+   */
   function contactController ($scope) {
     var _formModel = {
       lastName: "",

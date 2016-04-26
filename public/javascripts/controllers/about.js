@@ -1,8 +1,6 @@
 ;(function() {
   "use strict";
 
-  require("angular");
-
   /**
    * [aboutController description]
    * @param  {[type]} $scope     [description]

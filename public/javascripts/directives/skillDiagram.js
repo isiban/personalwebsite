@@ -1,7 +1,6 @@
 ;(function () {
   "use strict";
 
-  require("angular");
   var d3 = require("d3");
 
   /**

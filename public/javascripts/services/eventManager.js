@@ -1,8 +1,11 @@
 ;(function() {
   "use strict";
 
-  require("angular");
-
+  /**
+   * [eventManager description]
+   * @param  {[type]} $rootScope [description]
+   * @return {[type]}            [description]
+   */
   var eventManager = function ($rootScope) {
     var _events = {
       selectPortfolio: "SELECT_PORTFOLIO",

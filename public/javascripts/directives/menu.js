@@ -1,11 +1,12 @@
 ;(function () {
   "use strict";
 
-  require("angular");
-
   /**
    * [menuController description]
-   * @param {[type]} $scope    [description]
+   * @param  {[type]} $scope     [description]
+   * @param  {[type]} $state     [description]
+   * @param  {[type]} $translate [description]
+   * @return {[type]}            [description]
    */
   var menuController = function ($scope, $state, $translate) {
     var _menuItems = [
