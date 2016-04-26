@@ -3,9 +3,12 @@
 
   require("angular");
   require("angular-touch");
+  require("angular-cookies");
   require("angular-ui-router");
   require("angular-translate");
   require("angular-translate-loader-static-files");
+  require("angular-translate-storage-local");
+  require("angular-translate-storage-cookie");
   require("./controllers");
   require("./directives");
   require("./services");
@@ -14,6 +17,7 @@
     "ui.router",
     "ngTouch",
     "pascalprecht.translate",
+    "ngCookies",
     "app.controllers",
     "app.directives",
     "app.services"
@@ -35,6 +39,8 @@
       })
       .preferredLanguage("en")
       .fallbackLanguage("en");
+
+     $translateProvider.useLocalStorage();
 
     $stateProvider
       .state("about", {

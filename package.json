@@ -11,9 +11,11 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-cookies": "^1.5.5",
     "angular-touch": "^1.5.3",
     "angular-translate": "^2.11.0",
     "angular-translate-loader-static-files": "^2.11.0",
+    "angular-translate-storage-local": "^2.11.0",
     "angular-ui-router": "^0.2.18",
     "bulk-require": "^0.2.1",
     "bulkify": "^1.2.0",
