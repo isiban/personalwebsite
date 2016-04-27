@@ -29,7 +29,7 @@
      * @return {[type]} [description]
      */
     this.sendFormInformation = function () {
-
+      console.log(_formModel);
     };
 
   };

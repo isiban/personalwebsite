@@ -1,9 +1,28 @@
 section.contact {
-  padding: 60px 0 0 0;
+  padding: 120px 0 0 0;
+}
+
+section.contact form.information,
+section.contact div.coordinates {
+  display: inline-block;
+  vertical-align: top;
+}
+
+section.contact div.coordinates {
+  width: calc(100% - 350px);
+  padding: 0 0 0 50px;
+}
+
+@media (max-width: 767px) {
+  section.contact div.coordinates {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0;
+  }
 }
 
 section.contact form.information {
-  padding: 60px 0 0 0;
   max-width: 300px;
   margin: 0 auto;
 }
@@ -80,4 +99,58 @@ section.contact form.information button[type="submit"] {
 section.contact form.information button[type="submit"]:disabled {
   background: #36a6c9;
   opacity: 0.7;
+}
+
+section.contact div.coordinates h1 {
+  color: white;
+  font-size: 32px;
+  margin: 0 0 20px 0;
+}
+
+section.contact div.coordinates h3 {
+  color: white;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+section.contact div.coordinates #map-canvas {
+  max-width: 100%;
+  width: 100%;
+  max-height: 180px;
+  height: 100%;
+  margin: 0 auto 20px auto;
+}
+
+section.contact div.coordinates p.adress {
+  color: white;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+section.contact div.coordinates p.adress:before {
+  content: "\f041";
+  position: absolute;
+  font-family: "FontAwesome";
+  left: 0;
+}
+
+section.contact div.coordinates p.adress span {
+  display: block;
+}
+
+section.contact div.coordinates a.mail {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+section.contact div.coordinates a.mail:before {
+  content: "\f0e0";
+  position: absolute;
+  font-family: "FontAwesome";
+  left: 0;
 }

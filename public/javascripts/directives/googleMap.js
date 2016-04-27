@@ -2,7 +2,7 @@
   "use strict";
 
   var GoogleMapController = function () {
-    // API key: AIzaSyAY-KI9MJdTbvBXmBcU4KUuz8JG4fKH9Jo
+
   };
 
   var googleMap = function () {
@@ -10,8 +10,20 @@
       restrict: "A",
       controller: GoogleMapController,
       controllerAs: "googleMapCtrl",
-      link: function () {
+      link: function (scope, element, attrs) {
+        var map;
 
+        var initialize = function () {
+          var mapOptions = {
+            zoom: 8,
+            center: new google.maps.LatLng(48.8568980, 2.5283730),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+
+          map = new google.maps.Map(element[0], mapOptions);
+        }
+
+        initialize();
       }
     }
   };

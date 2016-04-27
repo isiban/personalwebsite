@@ -1,8 +1,25 @@
 section.contact {
-  padding: 60px 0 0 0;
+  padding: 120px 0 0 0;
+
+  form.information,
+  div.coordinates {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  div.coordinates {
+    width: calc(100% - 350px);
+    padding: 0 0 0 50px;
+
+     @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 20px 0;
+    }
+  }
 
   form.information {
-    padding: 60px 0 0 0;
     max-width: 300px;
     margin: 0 auto;
 
@@ -79,6 +96,59 @@ section.contact {
       &:disabled {
         background: #36a6c9;
         opacity : 0.7;
+      }
+    }
+  }
+
+  div.coordinates {
+    h1 {
+      color: white;
+      font-size: 32px;
+      margin: 0 0 20px 0;
+    }
+
+    h3 {
+      color: white;
+      font-size: 24px;
+      margin: 0 0 10px 0;
+    }
+
+    #map-canvas {
+      max-width: 100%;
+      width: 100%;
+      max-height: 180px;
+      height: 100%;
+      margin: 0 auto 20px auto;
+    }
+
+    p.adress {
+      color: white;
+      position: relative;
+      margin: 0 0 10px 0;
+      padding: 0 0 0 20px;
+      font-size: 14px;
+
+      &:before {
+        content: "\f041";
+        position: absolute;
+        font-family: "FontAwesome";
+        left: 0;
+      }
+      span { display: block; }
+    }
+
+    a.mail {
+      text-decoration: none;
+      color: white;
+      position: relative;
+      padding: 0 0 0 20px;
+      font-size: 14px;
+
+      &:before {
+        content: "\f0e0";
+        position: absolute;
+        font-family: "FontAwesome";
+        left: 0;
       }
     }
   }

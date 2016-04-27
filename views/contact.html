@@ -1,7 +1,6 @@
 <section class="contact">
   <article class="content_slide">
-    <form id="contact_form"
-          class="information"
+    <form class="information"
           name="formInformation"
           ng-submit="formInformation.$valid && contactCtrl.sendFormInformation()"
           novalidate>
@@ -54,9 +53,25 @@
                   required></textarea>
       </fieldset>
 
+      <div class="g-recaptcha"
+           data-callback=""
+           data-sitekey="6LcdbB4TAAAAALW6p8PrYG-FHmG5z7xeYstBxX-C"></div>
+
       <button id="sub" name="sub" type="submit" ng-disabled="formInformation.$invalid">
         {{ "translation.contact.form.submit" | translate }}
       </button>
-    </form>
+    </form><!--
+ --><div class="coordinates">
+      <h1>Let's stay in touch!</h1>
+      <div id="map_local">
+        <div id="map-canvas" google-map></div>
+      </div>
+      <h3>Ilya SIBAN</h3>
+      <p class="adress">
+        38 Avenue du Général de Gaulle
+        <span>93330 Neuilly-sur-Marne</span>
+      </p>
+      <a class="mail" href="mailto:ilya.siban.tic@gmail.com">ilya.siban.tic@gmail.com</a>
+    </div>
   </article>
 </section>
