@@ -34,13 +34,16 @@ translation:
 
     experiences:
       talentoday:
-        job: "Lead Front End Web Developer"
+        job: "Front End Web Développeur"
         company: "Talentoday Inc, 75008 Paris"
-        dates: "oct 2013 - present"
+        dates: "oct 2013 - Présent"
         description:
-          "Talentoday, my first startup experience, is an international company with offices in Paris
-          and San Francisco, built as a personality assessment for consumers and a SaaS software for
-          professional HR firms and staffing agencies.
+          "Talentoday, première expérience en start-up,  est une société internationale avec des
+          bureaux à Paris et San Francisco, à élaborer un test de personnalité pour le grand public
+          ainsi qu'un outil SaaS destiné aux sociétés et professionnels des ressources humaines.
+          Embauché comme premier membre de l'équipe d'ingénieur en qualité de développeur Front End,
+          j'ai été impliqué dans les processus de conception de l'expérience utilisateur et de définition
+          de l'interface utilisateur, tout en développant une plate-forme web.
           Hired as the first member of the engineering team and the only Front End developer, I was
           involved in the UX/UI conception process and the web development of a multi-million user web
           platform with extremely high daily traffic. Starting from scratch, I developed and integrated
