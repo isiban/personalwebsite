@@ -150,7 +150,6 @@
         $scope.clearSelectedPortfolio();
       }
     };
-
   };
 
   var portfolioDetails = function () {

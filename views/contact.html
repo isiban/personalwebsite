@@ -42,7 +42,8 @@
                name="object"
                type="text"
                placeholder='{{ "translation.contact.form.object" | translate }}'
-               ng-model="contactCtrl.getFormModel().object">
+               ng-model="contactCtrl.getFormModel().object"
+               required>
       </fieldset>
 
       <fieldset>
@@ -52,10 +53,13 @@
                   ng-model="contactCtrl.getFormModel().message"
                   required></textarea>
       </fieldset>
-
-      <div class="g-recaptcha"
-           data-callback=""
-           data-sitekey="6LcdbB4TAAAAALW6p8PrYG-FHmG5z7xeYstBxX-C"></div>
+          <p> value in parent for model : {{  contactCtrl.getFormModel().captcha }}
+<!--       <fieldset ng-if="contactCtrl.displayReCaptcha()">
+        <div re-captcha
+             class="g-recaptcha"
+             required
+             ng-model="contactCtrl.getFormModel().captcha"></div>
+      </fieldset> -->
 
       <button id="sub" name="sub" type="submit" ng-disabled="formInformation.$invalid">
         {{ "translation.contact.form.submit" | translate }}

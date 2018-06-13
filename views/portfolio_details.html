@@ -6,6 +6,8 @@
    --><a class="minus"></a><!--
    --><a class="plus"
          ng-click="portfolioDetailsCtrl.switchFullMode()"></a><!--
+   --><button class="home"
+              ng-click="portfolioDetailsCtrl.closeActivePortfolio()"></button><!--
    --><button class="prev"
               ng-click="portfolioDetailsCtrl.swipePrevScreen()"
               ng-disabled="!portfolioDetailsCtrl.getPrevButtonStatus()"></button><!--
@@ -65,8 +67,8 @@
         </ul>
 
         <div class="links">
-          <a ng-click="portfolioDetailsCtrl.swipeNextScreen()">See more</a>
-          <a class="website_link"
+          <a ng-click="portfolioDetailsCtrl.swipeNextScreen()">See more</a><!--
+       --><a class="website_link"
              ng-href="{{ portfolioDetailsCtrl.getPortfolio().website }}" target="_blank">
             Visit the website
           </a>
