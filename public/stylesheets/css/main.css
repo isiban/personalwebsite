@@ -11,7 +11,7 @@ body {
 
 html.portfolio,
 body.portfolio {
-  background: #008060;
+  background: #196d82;
 }
 
 html.curriculum,
@@ -21,7 +21,7 @@ body.curriculum {
 
 html.contact,
 body.contact {
-  background: #196d82;
+  background: #008060;
 }
 
 h1,
@@ -61,6 +61,10 @@ div.main_container:after {
 
 section {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 article.content_slide {

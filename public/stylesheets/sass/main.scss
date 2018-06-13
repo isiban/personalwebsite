@@ -9,9 +9,9 @@ body {
   width: 100%;
   height: 100%;
 
-  &.portfolio { background: #008060; }
-  &.curriculum {background: #24a79e;  }
-  &.contact { background: #196d82; }
+  &.portfolio  { background: #196d82; }
+  &.curriculum { background: #24a79e; }
+  &.contact    { background: #008060; }
 }
 
 h1,
@@ -47,7 +47,13 @@ div.main_container {
   }
 }
 
-section { width: 100%; }
+section {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 article.content_slide {
