@@ -17,11 +17,7 @@
     var fetch = function (url) {
       var deferred = $q.defer();
 
-      $http.get(url)
-      .error(function (data, status, header, config) {
-        deferred.reject("An error occured while fetching data");
-      })
-      .then(function (response) {
+      $http.get(url).then(function (response) {
         deferred.resolve(response.data);
       });
 

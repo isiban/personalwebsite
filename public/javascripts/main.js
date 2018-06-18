@@ -4,7 +4,7 @@
   require("angular");
   require("angular-touch");
   require("angular-cookies");
-  require("angular-ui-router");
+  require("@uirouter/angularjs");
   require("angular-translate");
   require("angular-translate-loader-static-files");
   require("angular-translate-storage-local");

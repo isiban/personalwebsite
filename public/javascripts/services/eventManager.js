@@ -22,7 +22,7 @@
 
       $rootScope.$broadcast(_events[eventName]);
       return true;
-    }
+    };
 
 
     var subscribeToEvent = function (scope, eventName, handler) {
@@ -47,6 +47,6 @@
   module.exports = {
     name: "eventManager",
     fn: eventManager
-  }
+  };
 
 })();

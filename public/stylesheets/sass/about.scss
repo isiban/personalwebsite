@@ -138,16 +138,16 @@ section.about {
   }
 }
 
-@for $i from 1 through 16 {
-  $num-letters: 8;
-  $angle-span: 180deg;
-  $angle-offset: 0deg;
-  $angle-per-char: $angle-span / $num-letters;
-
   @function lettering( $i ) {
+    $num-letters: 8;
+    $angle-span: 180deg;
+    $angle-offset: 0deg;
+    $angle-per-char: $angle-span / $num-letters;
     @return rotate( $angle-offset + $angle-per-char * $i );
   }
 
+
+@for $i from 1 through 16 {
   .char#{ $i } {
     transform: lettering( $i );
   }
